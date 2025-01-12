@@ -14,11 +14,8 @@ namespace Mubariz.AIBehaviors
         [HideInInspector]
         public Animator Animator;
 
-
-        public float velocityOfAgent;
-
         // making speed property
-        public float CurrentSpeed
+        public float CurrentVelocity
         {
             get
             {
@@ -32,13 +29,6 @@ namespace Mubariz.AIBehaviors
             Agent = GetComponent<NavMeshAgent>();
             Animator = GetComponent<Animator>();
         }
-
-        private void Update()
-        {
-            velocityOfAgent = Agent.velocity.magnitude;
-        }
-
-
     }
 
 }

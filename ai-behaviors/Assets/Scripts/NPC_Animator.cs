@@ -8,7 +8,7 @@ namespace Mubariz.AIBehaviors
     {
         private void Update()
         {
-            npc.Animator.SetFloat("Speed", npc.CurrentSpeed);
+            npc.Animator.SetFloat("Speed", npc.CurrentVelocity);
         }
     }
 

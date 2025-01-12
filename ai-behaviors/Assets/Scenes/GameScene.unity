@@ -122,6 +122,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 8881b2a831ac17a44a3784e52300e9fe, type: 2}
+--- !u!114 &20978910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8469670071381331695, guid: 757729537b317624f9ae0976c6c92ef9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3433446081193922191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11eed305f11aa144a86370fa6f18313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &49190418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1720,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1745226098}
+  m_Mesh: {fileID: 371558867}
 --- !u!33 &284140202
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -3754,7 +3766,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1745226098}
+  m_Mesh: {fileID: 382385569}
 --- !u!33 &580987438
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -5830,7 +5842,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 388152503}
+  m_Mesh: {fileID: 1099737836}
 --- !u!33 &699645917
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -6120,171 +6132,57 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!43 &700145661
-Mesh:
+--- !u!1 &705034768
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-87988(Clone)(Clone)
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 24
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 9
-    localAABB:
-      m_Center: {x: 25, y: 0.5, z: 25}
-      m_Extent: {x: 25, y: 0, z: 25}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200010004000300040005000300020003000600030007000600030005000700050008000700
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 9
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 432
-    _typelessdata: 000000000000003f00000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000000000000000003f0000c841000000000000803f000000000000803f0000000000000000000080bf000000000000c8410000c8410000003f00000000000000000000803f000000000000803f0000000000000000000080bf0000c841000000000000c8410000003f0000c841000000000000803f000000000000803f0000000000000000000080bf0000c8410000c841000000000000003f00004842000000000000803f000000000000803f0000000000000000000080bf00000000000048420000c8410000003f00004842000000000000803f000000000000803f0000000000000000000080bf0000c84100004842000048420000003f00000000000000000000803f000000000000803f0000000000000000000080bf0000484200000000000048420000003f0000c841000000000000803f000000000000803f0000000000000000000080bf000048420000c841000048420000003f00004842000000000000803f000000000000803f0000000000000000000080bf0000484200004842
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 25, y: 0.5, z: 25}
-    m_Extent: {x: 25, y: 0, z: 25}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705034770}
+  - component: {fileID: 705034769}
+  m_Layer: 0
+  m_Name: NPC_Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &705034769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705034768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 382d12824d99b324a936803dfb953cd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabInArea:
+  - area: {fileID: 1476296376}
+    playerPrefab: {fileID: 20978910}
+    count: 20
+  - area: {fileID: 1222885662}
+    playerPrefab: {fileID: 20978910}
+    count: 20
+--- !u!4 &705034770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705034768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 192.06224, y: 9.230751, z: -238.67476}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777178389
 GameObject:
   m_ObjectHideFlags: 0
@@ -7551,7 +7449,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 388152503}
+  m_Mesh: {fileID: 410938616}
 --- !u!33 &1015114321
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -8480,7 +8378,7 @@ GameObject:
   - component: {fileID: 1222885663}
   - component: {fileID: 1222885662}
   m_Layer: 0
-  m_Name: Area2
+  m_Name: Area 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8571,7 +8469,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1633969824}
+  m_Mesh: {fileID: 2139555769}
 --- !u!33 &1274948726
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -9783,7 +9681,7 @@ GameObject:
   - component: {fileID: 1476296377}
   - component: {fileID: 1476296376}
   m_Layer: 0
-  m_Name: Area
+  m_Name: Area 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21383,7 +21281,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 700145661}
+  m_Mesh: {fileID: 880692237}
 --- !u!33 &1784444653
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -21740,7 +21638,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1099737836}
+  m_Mesh: {fileID: 1784094852}
 --- !u!33 &2069745480
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -22281,3 +22179,4 @@ SceneRoots:
   - {fileID: 1222885663}
   - {fileID: 464725501}
   - {fileID: 939693148}
+  - {fileID: 705034770}

@@ -1,15 +1,19 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 
 namespace Mubariz.AIBehaviors
 {
     public class NPC_Wander : NPC_Component
     {
+        
         public Area Area;
 
         float waitTime;
-        float maxWaitTime = 3f;
+        float currentWanderTime;
+
+        float leastWaitTime = 3f;
+        float maxRandomWaitTime = 5f;
+        float maxWanderTime = 10f;
         enum EState
         {
             Wandering,
@@ -21,34 +25,29 @@ namespace Mubariz.AIBehaviors
 
         private void Start()
         {
-            
-            // In the start method we randomly start wandering or waiting of npcs
-            int randomNum = Random.Range(0, 100);
-            if (randomNum > 50)
-            {
-                state = EState.Wandering;
-                ChangeState(EState.Wandering);
-            }
-            else
-            {
-                state = EState.Waiting;
-                ChangeState (EState.Waiting);
-            }
-
-            SetRandomPosition();
+            SetRandomStateAtStart();
         }
+
+
         private void Update()
+        {
+            CheckState();
+        }
+
+        void CheckState()
         {
             if (state == EState.Wandering)
             {
-                npc.Agent.autoBraking = true;              
-                if (HasArrived())
+                currentWanderTime -= Time.deltaTime;
+
+                //PLAYER HAS REACHED DESTINATION
+                if (HasArrived() || currentWanderTime <= 0)
                 {
                     ChangeState(EState.Waiting);
                     state = EState.Waiting;
                 }
             }
-            
+
             if (state == EState.Waiting)
             {
                 npc.Agent.autoBraking = false;
@@ -60,30 +59,57 @@ namespace Mubariz.AIBehaviors
             }
         }
 
-        //Call function to set specific state
+
+        //TO SET SPECIFIC STATE
         void ChangeState(EState newState)
         {
             state = newState;
-            if (state == EState.Wandering)   //if state set to  wandering then we call appropriate function
+
+            //if state is WANDERING
+            if (state == EState.Wandering)   
             {
+                currentWanderTime = maxWanderTime;
                 npc.Agent.isStopped = false;
                 SetRandomPosition();
             }
-            if (state == EState.Waiting)  //if state is set to waiting then we reset waitTime  to maxWaitTime
+
+            //if state is WAITING
+            if (state == EState.Waiting)  
             {
-                waitTime = maxWaitTime;
-                npc.Agent.isStopped = true ;
+                waitTime = leastWaitTime + Random.Range(0,maxRandomWaitTime);
+                npc.Agent.isStopped = true;
             }
         }
+
+
+        void SetRandomStateAtStart()
+        {
+            // In the start method we randomly start wandering or waiting of npcs
+            int randomNum = Random.Range(0, 100);
+            if (randomNum > 50)
+            {
+                state = EState.Wandering;
+                ChangeState(EState.Wandering);
+            }
+            else
+            {
+                state = EState.Waiting;
+                ChangeState(EState.Waiting);
+            }
+        }
+
+
         bool HasArrived()
         {
             return npc.Agent.remainingDistance <= npc.Agent.stoppingDistance;
         }
 
+
         void SetRandomPosition()
         {
             npc.Agent.SetDestination(Area.GetRandomPoint());
         }
-    }
 
+     
+    }
 }
