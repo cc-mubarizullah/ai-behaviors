@@ -36,6 +36,10 @@ namespace Mubariz.AIBehaviors
 
         void CheckState()
         {
+            if (npc.Wander == false)
+            {
+                return;
+            }
             if (state == EState.Wandering)
             {
                 currentWanderTime -= Time.deltaTime;
@@ -84,17 +88,20 @@ namespace Mubariz.AIBehaviors
 
         void SetRandomStateAtStart()
         {
-            // In the start method we randomly start wandering or waiting of npcs
-            int randomNum = Random.Range(0, 100);
-            if (randomNum > 50)
+            if (npc.Wander == true)
             {
-                state = EState.Wandering;
-                ChangeState(EState.Wandering);
-            }
-            else
-            {
-                state = EState.Waiting;
-                ChangeState(EState.Waiting);
+                // In the start method we randomly start wandering or waiting of npcs
+                int randomNum = Random.Range(0, 100);
+                if (randomNum > 50)
+                {
+                    state = EState.Wandering;
+                    ChangeState(EState.Wandering);
+                }
+                else
+                {
+                    state = EState.Waiting;
+                    ChangeState(EState.Waiting);
+                }
             }
         }
 
