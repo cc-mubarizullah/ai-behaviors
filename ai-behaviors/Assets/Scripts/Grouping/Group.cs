@@ -6,6 +6,12 @@ using UnityEngine;
 
 namespace Mubariz.AIBehaviors
 {
+    /// <summary>
+    /// 
+    ///     THIS SCRIPT IS RESPONSIBLE FOR HANDLING GROUP MEMBERS, IT WILL TAKE FORMATION SO TO 
+    /// 
+    /// </summary>
+
     public class Group : MonoBehaviour
     {
         public bool DrawGizmos = false;
