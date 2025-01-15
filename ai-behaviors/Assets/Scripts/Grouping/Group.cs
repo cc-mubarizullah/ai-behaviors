@@ -103,7 +103,7 @@ namespace Mubariz.AIBehaviors
 
             for (int i = members.Count - 1; i >= 0; i--)  //we continously loop through all members from end
             {
-                if (!members[i].Alive)   //if any npc is NOT ALIVE
+                if (members[i].Alive == false)   //if any npc is NOT ALIVE
                 {
                     members[i].Group = null;    //  we remove it from this group 
                     members.RemoveAt(i);         // and remove it from the list 
