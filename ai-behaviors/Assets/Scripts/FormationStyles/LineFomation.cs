@@ -1,31 +1,37 @@
 using Mubariz.AIBehaviors;
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="Game/Formation/Line Formation")]
-public class LineFomation : Formation
+namespace Mubariz.AIBehaviors
 {
-    [SerializeField]
-    float Spacing = 3f;
-
-    public override Vector3 GetPosition(NPC npc, Group group)
+    [CreateAssetMenu(menuName = "Game/Formation/Line Formation")]
+    public class LineFomation : Formation
     {
-        if (group.IsLeader(npc))
+        [SerializeField]
+        float Spacing = 3f;
+
+        public override Vector3 GetPosition(NPC npc, Group group)
         {
-            return npc.Position;
+            if (group.IsLeader(npc))
+            {
+                return npc.Position;
+            }
+
+            NPC leader = group.GetLeader();
+
+            Vector3 leaderRight = Vector3.Cross(Vector3.up, leader.Direction).normalized;  //gives us the direction prependicular vector between forward and up
+
+            Vector3 position = leader.Position - leader.Direction * Spacing;    // 3 units backward from leader position     
+
+            float formationWidth = (group.FollowerCount - 1) * Spacing;      //numbers of npc except leader multiply by spacing gives us the total lenght of the line
+
+            position -= leaderRight * formationWidth * 0.5f;   //from 3 units back of leader we half of the left side
+
+            position += leaderRight * Spacing * group.GetFollowerIndex(npc);   //and now from that position we do exactly the same as column formation but in right side
+
+// suppose for follower npc = left most position * 3  * 2 ;
+             
+            return AdjustPosition(position, leader.Position);   
         }
-
-        NPC leader = group.GetLeader();
-
-        Vector3 leaderRight = Vector3.Cross(Vector3.up, leader.Direction).normalized;
-
-        Vector3 position = leader.Position - leader.Direction * Spacing;
-
-        float formationWidth = (group.FollowerCount - 1) * Spacing;
-
-        position -= leaderRight * formationWidth * 0.5f;
-
-        position += leaderRight * Spacing * group.GetFollower(npc);
-
-        return AdjustPosition(position, leader.Position);
     }
+
 }

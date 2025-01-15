@@ -24,13 +24,23 @@ namespace Mubariz.AIBehaviors
         [SerializeField]
         Formation formation;  // private variable 
 
-        public Formation Formation => formation;  //public property to access it
+        public Formation Formation
+        {
+            get
+            {
+                return formation;
+            }
+            set
+            {
+                formation = value;
+            }
+        }
 
         public int MemberCount => members.Count;
 
         public int FollowerCount => Mathf.Max(0, MemberCount - 1); // we exclude 1 because there should be one leader
 
-        public int GetFollower (NPC npc) => members.IndexOf(npc) - 1;  // to get the follower of any npc we subtract the npc number in list by one
+        public int GetFollowerIndex (NPC npc) => members.IndexOf(npc) - 1;  // to get the follower of any npc we subtract the npc number in list by one
 
         public bool IsLeader(NPC npc) => members.IndexOf(npc)==0;   // check if its the first index of the list
 

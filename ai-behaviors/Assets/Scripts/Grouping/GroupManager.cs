@@ -5,6 +5,12 @@ using UnityEngine;
 
 namespace Mubariz.AIBehaviors
 {
+
+    /// <summary>
+    /// 
+    ///   THIS CLASS IS RESPONSIBLE FOR CREATING NEW GAMEOBJECTS WITH "GROUP" AT RUNTIME BY PARETING ITSELF TO THEM
+    /// 
+    /// </summary>
     public class GroupManager : MonoBehaviour
     {
         //LIST OF ALL THE GROUPS
