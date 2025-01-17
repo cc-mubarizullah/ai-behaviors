@@ -8,7 +8,12 @@ namespace Mubariz.AIBehaviors
     {
         private void Update()
         {
-            npc.Animator.SetFloat("Speed", npc.CurrentVelocity);
+
+            float forwardSpeed = Vector3.Dot(npc.Velocity, npc.transform.forward);// if +, player moving forward...if -, player moving backward, ....if 0 player is standard
+            float rightSpeed = Vector3.Dot(npc.Velocity, npc.transform.right); // if +, player moving right...if -, player moving left, ....if 0 player is standard
+
+            npc.Animator.SetFloat("Speed", forwardSpeed);
+            npc.Animator.SetFloat("StrafeSpeed", rightSpeed);
         }
     }
 

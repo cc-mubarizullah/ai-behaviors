@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Mubariz.AIBehaviors
 {
     /// <summary>
-    ///             THIS SCRIPT IS RESPOSIBLE FOR PROVIDING ITS DERIVED CLASSES THE NPC COMPONENT
+    ///             THIS SCRIPT IS BASE CLASS OF NPC
     /// </summary>
     public class NPC_Component : MonoBehaviour
     {
@@ -15,6 +15,11 @@ namespace Mubariz.AIBehaviors
         private void Awake()
         {
             npc = GetComponentInParent<NPC>();
+        }
+
+        public virtual void SetNPC(NPC npc)
+        {
+            this.npc = npc;                 // the assigned npc in this function will be the npc that this script will use
         }
     }
 
